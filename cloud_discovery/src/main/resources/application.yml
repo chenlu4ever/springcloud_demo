@@ -1,16 +1,3 @@
 spring:
-  application:
-    name: cloud_discovery #服务名称,自定义
-server:
-  port: 8080 #指定该Eureka实例的端口
-eureka:
-  instance:
-    hostname: 127.0.0.1
-  server:
-    renewal-percent-threshold: 0.49 #设置心跳正常的阀值，默认为1，测试时可以调低
-  client:
-    register-with-eureka: false #禁止注册自身 (集群配置才为true)
-    fetch-registry: false #因为该服务没有注册到其他注册中心，所以关闭从注册中心拉取服务列表。 (集群配置才为true)
-    #如果是服务注册中心集群，需要开启，开启就是去掉该配置，采用默认配置即可
-    service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #服务注册中心地址
+  profiles:
+    active: dev

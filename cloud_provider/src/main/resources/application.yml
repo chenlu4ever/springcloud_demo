@@ -1,13 +1,3 @@
-server:
-  port: 8090
-
 spring:
-  application:
-    name: cloud-provider
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://user:123456@localhost:8080/eureka
-  instance:
-    prefer-ip-address: true
+  profiles:
+    active: dev

@@ -24,6 +24,7 @@ public class HouseManegeFallbackFactory implements FallbackFactory<ProviderClien
                 object.put("data","I'm Hystrix from queryHouseList");
                 return object;
             }
+
         };
     }
 }

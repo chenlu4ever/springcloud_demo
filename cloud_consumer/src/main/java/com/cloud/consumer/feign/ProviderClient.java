@@ -12,9 +12,11 @@ import java.util.Map;
 
 @FeignClient(name = "cloud-provider", fallbackFactory = HouseManegeFallbackFactory.class)
 public interface ProviderClient {
+
     @RequestMapping(value = "/customer/queryCustomerInfoByTel",method = RequestMethod.GET)
     public JSONObject queryCustomerInfoByTel(@RequestParam("tel") String tel);
 
     @RequestMapping(value = "/house/queryHouseList",method = RequestMethod.POST)
     public JSONObject queryHouseList(@RequestBody Map<String, Object> requestMap);
+
 }

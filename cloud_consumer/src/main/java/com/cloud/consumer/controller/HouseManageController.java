@@ -27,7 +27,7 @@ public class HouseManageController {
      * @param tel
      * @return
      */
-    @RequestMapping(value = "queryCustomerInfoByTel", method = RequestMethod.GET)
+    @RequestMapping(value = "/queryCustomerInfoByTel", method = RequestMethod.GET)
     public ResponseInfo queryCustomerInfoByTel(@RequestParam String tel){
         try{
             if(StringUtils.isEmpty(tel)){
@@ -45,7 +45,7 @@ public class HouseManageController {
      * @param requestMap
      * @return
      */
-    @RequestMapping(value = "queryHouseList", method = RequestMethod.POST)
+    @RequestMapping(value = "/queryHouseList", method = RequestMethod.POST)
     public ResponseInfo queryHouseList(@RequestBody Map<String,Object> requestMap){
         try{
             return ResponseUtil.success(providerClient.queryHouseList(requestMap));
@@ -54,4 +54,6 @@ public class HouseManageController {
             return ResponseUtil.error();
         }
     }
+
+
 }

@@ -1,0 +1,25 @@
+server:
+  port: 8091
+spring:
+  application:
+    name: cloud-consumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.107.119.189:8080/eureka/ #服务注册中信地址，含有BASIC认证的用户名和密码
+  instance:
+    prefer-ip-address: true #将IP注册到服务注册中心
+feign:
+  hystrix:
+    enabled: true
+#hystrix超时时间配置 （如果不配置的话默认是1000毫秒超时）
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 9000

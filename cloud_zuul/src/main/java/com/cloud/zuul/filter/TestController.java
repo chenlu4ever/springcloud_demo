@@ -1,4 +1,4 @@
-package com.cloud.provider.controller;
+package com.cloud.zuul.filter;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

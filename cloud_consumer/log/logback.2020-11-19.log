@@ -1,0 +1,14 @@
+14:40:10.884 logback [main] INFO  c.c.c.CloudConsumerApplicationTests - The following profiles are active: stg
+14:40:11.808 logback [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=8bfe9cf7-faeb-38f4-bca4-a1442f5723da
+14:40:11.983 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.cloud.consumer.feign.ProviderClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:40:12.968 logback [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+14:40:12.969 logback [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+14:40:12.988 logback [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+14:40:12.989 logback [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+14:40:13.461 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+14:40:14.546 logback [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses Jersey
+14:40:14.997 logback [main] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+14:40:15.125 logback [main] INFO  c.c.c.CloudConsumerApplicationTests - Started CloudConsumerApplicationTests in 6.144 seconds (JVM running for 7.641)
+14:40:15.591 logback [SpringContextShutdownHook] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+14:40:15.596 logback [SpringContextShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application CLOUD-CONSUMER with eureka with status DOWN
+14:40:15.600 logback [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
