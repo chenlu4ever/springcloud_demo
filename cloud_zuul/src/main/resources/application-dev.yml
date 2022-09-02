@@ -26,3 +26,8 @@ zuul:
     api-consumer:
       path: /api-consumer/**
       service-id: cloud-consumer  #应用名映射
+  ignored-patterns: /**/admin/** #过滤掉匹配URL
+  sensitive-headers:     #默认会过滤 "Cookie", "Set-Cookie", "Authorization" 会影响统一授权
+#  strip-prefix: true    #默认时或true时 转发到服务的请求是/**，如果stripPrefix=false，转发的请求是直接/api-consumer/**
+#  prefix: /api #会对所有的path增加一个/api前缀
+
