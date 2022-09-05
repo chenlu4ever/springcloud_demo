@@ -31,7 +31,7 @@ public class SqlInjectionFilter extends ZuulFilter {
     //数值月大越靠后，越小越先
     @Override
     public int filterOrder() {
-        return FilterConstants.PRE_DECORATION_FILTER_ORDER -2;
+        return FilterConstants.PRE_DECORATION_FILTER_ORDER -1;
     }
 
     @Override
@@ -51,6 +51,7 @@ public class SqlInjectionFilter extends ZuulFilter {
                 Map<String,Object> result = new HashMap<>();
                 result.put("code","501");
                 result.put("msg","存在SQL注入风险");
+                ctx.getResponse().setContentType("text/html;charset=UTF-8");
                 ctx.setResponseBody(new JSONObject(result).toJSONString());
             }
         } catch (IOException e) {
